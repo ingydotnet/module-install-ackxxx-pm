@@ -4,6 +4,7 @@ name            'Module-Install-AckXXX';
 all_from        'lib/Module/Install/AckXXX.pm';
 readme_from;
 manifest_skip;
+version_check;
 ack_xxx;
 
 requires 'App::Ack';
