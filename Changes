@@ -1,4 +1,8 @@
 ---
+version: 0.12
+date:    Sat May 28 04:08:19 EST 2011
+changes: Fixed mac os dist bug in 0.10
+---
 version: 0.11
 date:    Fri Sep 17 17:15:20 PDT 2010
 changes: Fixed mac os dist bug in 0.10

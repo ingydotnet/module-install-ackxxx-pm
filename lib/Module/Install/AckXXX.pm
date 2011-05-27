@@ -1,13 +1,25 @@
+##
+# name:      Module::Install::AckXXX
+# abstract:  Warn Author About XXX.pm
+# author:    Ingy döt Net <ingy@cpan.org>
+# license:   perl
+# copyright: 2010, 2011
+
 package Module::Install::AckXXX;
+use 5.008003;
 use strict;
 use warnings;
-use 5.008003;
+
+my $requires = "
+use App::Ack 1.94 ();
+use Capture::Tiny 0.10 ();
+";
 
 use Module::Install::Base;
 
 use vars qw($VERSION @ISA);
 BEGIN {
-    $VERSION = '0.11';
+    $VERSION = '0.12';
     @ISA     = 'Module::Install::Base';
 }
 
@@ -16,7 +28,7 @@ sub ack_xxx {
     return unless $self->is_admin;
 
     require Capture::Tiny;
-    sub ack { system "ack '^\\s*use XXX\\b'"; }
+    sub ack { system "ack -G '\\.(pm|t|PL)\$' '^\\s*use XXX\\b'"; }
     my $output = Capture::Tiny::capture_merged(\&ack);
     $self->_report($output) if $output;
 }
@@ -35,12 +47,6 @@ $output
 }
 
 1;
-
-=encoding utf8
-
-=head1 NAME
-
-Module::Install::AckXXX - Warn Author About XXX.pm
 
 =head1 SYNOPSIS
 
@@ -65,18 +71,3 @@ whenever you run:
 
 so you will remember to remove or comment out usage of the L<XXX>
 debugging module, before releasing your module.
-
-=head1 AUTHOR
-
-Ingy döt Net <ingy@cpan.org>
-
-=head1 COPYRIGHT
-
-Copyright (c) 2010. Ingy döt Net.
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
-
-See L<http://www.perl.com/perl/misc/Artistic.html>
-
-=cut
