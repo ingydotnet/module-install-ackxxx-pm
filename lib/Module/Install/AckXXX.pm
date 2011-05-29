@@ -15,13 +15,9 @@ use App::Ack 1.94 ();
 use Capture::Tiny 0.10 ();
 ";
 
-use Module::Install::Base;
-
-use vars qw($VERSION @ISA);
-BEGIN {
-    $VERSION = '0.13';
-    @ISA     = 'Module::Install::Base';
-}
+use base 'Module::Install::Base';
+our $VERSION = '0.14';
+our $AUTHOR_ONLY = 1;
 
 sub ack_xxx {
     my $self = shift;
