@@ -1,4 +1,8 @@
 ---
+version: 0.15
+date:    Mon May 30 20:37:21 EST 2011
+changes: Rerelease with Module::Package 0.18
+---
 version: 0.14
 date:    Mon May 30 00:11:03 EST 2011
 changes: Rerelease with Module::Package 0.16
