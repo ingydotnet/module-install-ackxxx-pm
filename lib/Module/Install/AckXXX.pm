@@ -16,7 +16,7 @@ use Capture::Tiny 0.10 ();
 ";
 
 use base 'Module::Install::Base';
-our $VERSION = '0.15';
+our $VERSION = '0.16';
 our $AUTHOR_ONLY = 1;
 
 sub ack_xxx {
