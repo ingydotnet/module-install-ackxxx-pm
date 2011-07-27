@@ -16,7 +16,7 @@ use Capture::Tiny 0.10 ();
 ";
 
 use base 'Module::Install::Base';
-our $VERSION = '0.16';
+our $VERSION = '0.17';
 our $AUTHOR_ONLY = 1;
 
 sub ack_xxx {
@@ -24,7 +24,7 @@ sub ack_xxx {
     return unless $self->is_admin;
 
     require Capture::Tiny;
-    sub ack { system "ack -G '\\.(pm|t|PL)\$' '^\\s*use XXX\\b'"; }
+    sub ack { system "ack -G '\\.(pm|t|PL)\$' '^\\s*use XXX\\b(?!\\s*\\d)'"; }
     my $output = Capture::Tiny::capture_merged(\&ack);
     $self->_report($output) if $output;
 }
