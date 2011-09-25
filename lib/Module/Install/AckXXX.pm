@@ -6,7 +6,7 @@
 # copyright: 2010, 2011
 
 package Module::Install::AckXXX;
-use 5.008003;
+use 5.008001;
 use strict;
 use warnings;
 
@@ -16,7 +16,7 @@ use Capture::Tiny 0.10 ();
 ";
 
 use base 'Module::Install::Base';
-our $VERSION = '0.17';
+our $VERSION = '0.18';
 our $AUTHOR_ONLY = 1;
 
 sub ack_xxx {

@@ -1,4 +1,10 @@
 ---
+version: 0.18
+date:    Sun Sep 25 04:14:40 CEST 2011
+changes:
+- Minimum perl 5.8.1
+- https://rt.cpan.org/Public/Bug/Display.html?id=71156
+---
 version: 0.17
 date:    Wed Jul 27 11:08:41 CDT 2011
 changes: Allow XXX usage by modules that require it.
