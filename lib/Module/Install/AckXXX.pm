@@ -3,7 +3,7 @@
 # abstract:  Warn Author About XXX.pm
 # author:    Ingy döt Net <ingy@cpan.org>
 # license:   perl
-# copyright: 2010, 2011
+# copyright: 2010, 2011, 2013
 
 package Module::Install::AckXXX;
 use 5.008001;
@@ -16,7 +16,7 @@ use Capture::Tiny 0.10 ();
 ";
 
 use base 'Module::Install::Base';
-our $VERSION = '0.18';
+our $VERSION = '0.19';
 our $AUTHOR_ONLY = 1;
 
 sub ack_xxx {
@@ -24,7 +24,8 @@ sub ack_xxx {
     return unless $self->is_admin;
 
     require Capture::Tiny;
-    sub ack { system "ack -G '\\.(pm|t|PL)\$' '^\\s*use XXX\\b(?!\\s*\\d)'"; }
+    sub ack { system "find lib t Makefile.PL -type f | ack -x '^\\s*use XXX\\b(?!\\s*\\d)'"; }
+
     my $output = Capture::Tiny::capture_merged(\&ack);
     $self->_report($output) if $output;
 }
