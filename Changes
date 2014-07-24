@@ -1,4 +1,9 @@
 ---
+version: 0.20
+date:    Thu Jul 24 10:14:52 PDT 2014
+changes:
+- Switch to Zilla::Dist
+---
 version: 0.19
 date:    Sat Sep 14 14:34:54 PDT 2013
 changes:
@@ -12,32 +17,40 @@ changes:
 ---
 version: 0.17
 date:    Wed Jul 27 11:08:41 CDT 2011
-changes: Allow XXX usage by modules that require it.
+changes:
+- Allow XXX usage by modules that require it.
 ---
 version: 0.16
 date:    Wed Jun  1 20:08:44 EST 2011
-changes: Rerelease with Module::Package 0.19
+changes:
+- Rerelease with Module::Package 0.19
 ---
 version: 0.15
 date:    Mon May 30 20:37:21 EST 2011
-changes: Rerelease with Module::Package 0.18
+changes:
+- Rerelease with Module::Package 0.18
 ---
 version: 0.14
 date:    Mon May 30 00:11:03 EST 2011
-changes: Rerelease with Module::Package 0.16
+changes:
+- Rerelease with Module::Package 0.16
 ---
 version: 0.13
 date:    Sat May 28 16:45:30 EST 2011
-changes: Rerelease with Module::Package 0.14
+changes:
+- Rerelease with Module::Package 0.14
 ---
 version: 0.12
 date:    Sat May 28 04:08:19 EST 2011
-changes: Fixed mac os dist bug in 0.10
+changes:
+- Fixed mac os dist bug in 0.10
 ---
 version: 0.11
 date:    Fri Sep 17 17:15:20 PDT 2010
-changes: Fixed mac os dist bug in 0.10
+changes:
+- Fixed mac os dist bug in 0.10
 ---
 version: 0.10
 date:    Tue Sep 14 17:18:47 PDT 2010
-changes: initial release
+changes:
+- initial release

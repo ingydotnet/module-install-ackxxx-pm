@@ -1,22 +1,8 @@
-##
-# name:      Module::Install::AckXXX
-# abstract:  Warn Author About XXX.pm
-# author:    Ingy döt Net <ingy@cpan.org>
-# license:   perl
-# copyright: 2010, 2011, 2013
-
+use strict; use warnings;
 package Module::Install::AckXXX;
-use 5.008001;
-use strict;
-use warnings;
-
-my $requires = "
-use App::Ack 1.94 ();
-use Capture::Tiny 0.10 ();
-";
+our $VERSION = '0.20';
 
 use base 'Module::Install::Base';
-our $VERSION = '0.19';
 our $AUTHOR_ONLY = 1;
 
 sub ack_xxx {
@@ -44,27 +30,3 @@ $output
 }
 
 1;
-
-=head1 SYNOPSIS
-
-    use inc::Module::Install;
-
-    name     'Foo';
-    all_from 'lib/Foo.pm';
-
-    ack_xxx;
-
-    WriteAll;
-
-=head1 DESCRIPTION
-
-If you are the module author, this module runs the command:
-
-    system "ack '^\\s*use XXX\\b'";
-
-whenever you run:
-
-    perl Makefile.PL
-
-so you will remember to remove or comment out usage of the L<XXX>
-debugging module, before releasing your module.
