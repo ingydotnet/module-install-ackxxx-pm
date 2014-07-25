@@ -1,7 +1,7 @@
 =meta: 0.0.1
 
 name: Module-Install-AckXXX
-version: 0.20
+version: 0.21
 abstract: Warn Author About XXX.pm
 homepage: https://metacpan.org/release/Module-Install-AckXXX
 
@@ -19,6 +19,7 @@ requires:
   perl: 5.8.1
   App::Ack: 1.94
   Capture::Tiny: 0.10
+  Module::Install: 1.10
 
 devel:
   git: https://github.com/ingydotnet/module-install-ackxxx-pm

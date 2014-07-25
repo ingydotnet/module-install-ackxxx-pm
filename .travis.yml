@@ -20,6 +20,7 @@ install:
   Devel::Cover::Report::Coveralls
   App::Ack
   Capture::Tiny
+  Module::Install
 
 script:
 - PERL5OPT=-MDevel::Cover=-coverage,statement,branch,condition,path,subroutine
