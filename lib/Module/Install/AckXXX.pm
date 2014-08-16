@@ -1,6 +1,6 @@
 use strict; use warnings;
 package Module::Install::AckXXX;
-our $VERSION = '0.25';
+our $VERSION = '0.26';
 
 use base 'Module::Install::Base';
 our $AUTHOR_ONLY = 1;
