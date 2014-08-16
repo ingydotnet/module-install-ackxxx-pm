@@ -1,31 +1,28 @@
-=meta: 0.0.1
+=meta: 0.0.2
 
 name: Module-Install-AckXXX
-version: 0.26
+version: 0.27
 abstract: Warn Author About XXX.pm
 homepage: https://metacpan.org/release/Module-Install-AckXXX
-
+language: perl
 license: perl
-copyright: 2010-2014. Ingy döt Net.
+copyright: 2010-2014
+
 author:
   name: Ingy döt Net
   email: ingy@cpan.org
+  homepage: http://ingy.net
   github: ingydotnet
   twitter: ingydotnet
   freenode: ingy
-  homepage: http://ingy.net
-
-requires:
-  perl: 5.8.1
-  App::Ack: 1.94
-  Capture::Tiny: 0.10
-  Module::Install: 1.10
 
 devel:
   git: https://github.com/ingydotnet/module-install-ackxxx-pm
   bug: https://github.com/ingydotnet/module-install-ackxxx-pm/issues
   irc: irc.freenode.net#pkg
 
-=travis:
-  type: perl
-  irc: irc.freenode.net#pkg
+requires:
+  perl: 5.8.1
+  App::Ack: 1.94
+  Capture::Tiny: 0.10
+  Module::Install: 1.10
